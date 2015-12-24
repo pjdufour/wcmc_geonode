@@ -2,3 +2,7 @@
     height: 50px;
     background: url(../img/unep_wcmc.png) no-repeat;
 }
+
+.jumbotron {
+	background: url(../img/background.jpg) no-repeat;
+}
