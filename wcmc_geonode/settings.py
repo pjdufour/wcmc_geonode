@@ -33,7 +33,6 @@ LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 WSGI_APPLICATION = "wcmc_geonode.wsgi.application"
 
-
 # Load more settings from a file called local_settings.py if it exists
 try:
     from local_settings import *
