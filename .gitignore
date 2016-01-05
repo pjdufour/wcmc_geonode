@@ -1,4 +1,4 @@
-wcmc_geonode/local_settings.py
-wcmc_geonode/local_settings.pyc
+wcmc_geonode/wcmc_geonode/local_settings.py
+wcmc/geonode/wcmc_geonode/local_settings.pyc
 *.pyc
 
