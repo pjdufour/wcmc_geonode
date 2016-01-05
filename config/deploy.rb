@@ -1,14 +1,12 @@
 application = "wcmc_geonode"
 set :application, "wcmc_geonode"
-set :user, 'ubuntu'
-set :repository,  "https://github.com/unepwcmc/wcmc_geonode.git"
+set :username, 'ubuntu'
+set :repo_url,  "https://github.com/unepwcmc/wcmc_geonode.git"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory $
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "ec2-46-51-154-19.eu-west-1.compute.amazonaws.com"                          # Your HTTP server, Apache/etc
-role :app, "ec2-46-51-154-19.eu-west-1.compute.amazonaws.com"                          # This may be the same as your `Web` server
-role :db,  "ec2-46-51-154-19.eu-west-1.compute.amazonaws.com", :primary => true # This is where Rails migrations will run
+role :web, "geonode"                          # Your HTTP server, Apache/etc
 
 set :branch, "master"
 set :scm_username, "migtorres"
