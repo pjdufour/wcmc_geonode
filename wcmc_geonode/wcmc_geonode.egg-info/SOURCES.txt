@@ -1,5 +1,6 @@
 README.rst
 wcmc_geonode/__init__.py
+wcmc_geonode/local_settings.py
 wcmc_geonode/settings.py
 wcmc_geonode/urls.py
 wcmc_geonode/wsgi.py
