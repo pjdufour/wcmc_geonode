@@ -684,7 +684,7 @@ msgid ""
 "Data is available for browsing, aggregating and styling to generate maps "
 "which can be shared publicly or restricted to specific users only."
 msgstr ""
-"Data is available for browsing, aggregating and styling to generate maps "
+"Data is available for browsing, adding to GIS software, aggregating and styling to generate maps "
 "which can be shared publicly or restricted to specific users only."
 
 #: contrib/geosites/templates/master_index.html:38 templates/index.html:43
@@ -1335,6 +1335,10 @@ msgstr "Membership is by invitation only."
 #: groups/templates/groups/group_members.html:14
 msgid "Managers"
 msgstr "Managers"
+
+#: groups/templates/groups/group_list.html:12
+msgid "Create a New Group"
+msgstr "Create a New Programme"
 
 #: groups/templates/groups/group_invite_response.html:10
 msgid "Membership Request"
@@ -3295,7 +3299,7 @@ msgstr "People"
 
 #: templates/500.html:69 templates/base.html:70
 msgid "Groups"
-msgstr "Programme"
+msgstr "Programmes"
 
 #: templates/500.html:89 templates/base.html:90
 msgid "Register"
