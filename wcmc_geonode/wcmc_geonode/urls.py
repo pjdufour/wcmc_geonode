@@ -9,4 +9,5 @@ urlpatterns = patterns('',
        name='home'),
    url(r'^help/layers?$', TemplateView.as_view(template_name='help/layers.html'), name='helplayers'),
    url(r'^help/maps?$', TemplateView.as_view(template_name='help/maps.html'), name='helpmaps'),
+   url(r'^help/documents?$', TemplateView.as_view(template_name='help/documents.html'), name='helpdocuments'),
  ) + urlpatterns

@@ -1,0 +1,71 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "User Guide" %} - {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>Documents</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p>Despite not being its main focus, UNEP-WCMC Geonode is an excellent place to store documents and search for them.</p>
+    <p>The Documents tab also allows attaching information to Geographic layers when metadata fields do not have all the information needed </p>
+    <h3 id="document-browsing">Browsing and Searching</h3>
+    <p>All documents can be browsed and searched by clicking on the <a href="/documents">Documents</a> tab. You will be able to filter results by Text, Type, Categories, Keywords, Owners, Date, Regions and Extent.</p>
+    <h3 id="formats">Formats</h3>
+    <p>Documents can be uploaded in the following formats:</p>
+    <h4>Portable Documents</h4>
+    <ul>
+      <li>.pdf</li>
+    </ul>
+    <h4>Text Documents</h4>
+    <ul>
+      <li>.doc</li>
+      <li>.docx</li>
+      <li>.odt</li>
+      <li>.txt</li>
+    </ul>
+    <h4>Image FIles</h4>
+    <ul>
+      <li>.gif</li>
+      <li>.jpg</li>
+      <li>.jpeg</li>
+      <li>.png</li>
+      <li>.tif</li>
+      <li>.tiff</li>
+    </ul>
+    <h4>Spreadsheets</h4>
+    <ul>
+      <li>.xls</li>
+      <li>.xlsx</li>
+      <li>.ods</li>
+    </ul>
+    <h4>Presentations</h4>
+    <ul>
+      <li>.odp</li>
+      <li>.ppt</li>
+      <li>.pptx</li>
+    </ul> 
+    <h4>Compressed Files</h4>
+    <ul>
+      <li>.rar</li>
+      <li>.zip</li>
+      <li>.gz</li>
+    </ul>
+    <h4>XML based files</h4>
+    <ul>
+      <li>.sld</li>
+      <li>.xml</li>
+    <ul> 
+  </div>
+  <div class="col-md-4">
+    <ul class="list-group">
+      <li class="list-group-item"><a href="#layer-browsing">Browsing and Searching</a></li>
+      <li class="list-group-item"><a href="#adding-datasets">Adding Datasets</a></li>
+      <li class="list-group-item"><a href="#format-conversion">Format Conversion</a></li>
+      <li class="list-group-item"><a href="#cs-setup">Coordinate System Setup</a></li>
+   </ul>
+  </div>
+</div>
+{% endblock %}
