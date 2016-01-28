@@ -1,0 +1,95 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "User Guide" %} - {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>People</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+  <p>In the people tab you can browse through all the users and check their layers, maps and documents.</p>
+  <p>There are three different types of user: Guest, Regular User, Data Champion and Data Manager. Each of them have different levels of access to Geonode.</p>
+
+  <h3 id="guest">Guest User</h3>
+  <p>A guest user can be anyone that has browsed to UNEP-WCMC Geonode. This person cannot add datasets but he/she can have access to open datasets and read the owner's profile.</p>
+
+  <h3 id="regular">Regular User</h3>
+  <p>A regular user is a member of UNEP-WCMC that has not Programme admin privileges. Apart from that this user has access to almost all UNEP-WCMC Geoonode features including uploading data, setting permissions, accessing data and creating and manage project groups.</p>
+
+  <h3 id="champion">Data Champions and Heads of Programme</h3>
+  <p>The Data Champions and Heads of Programme can access the same features as a regular user but they can also manage their Programme's group, including adding and removing users from it and giving managing permissions to other users.</p>
+
+  <h3 id="manager">Data Manager</h3>
+  <p>The data manager has a full admin access and can manage all datasets, groups and users.</p>
+
+  <h3 id="role">Roles Table</h3>
+
+  <table class="table" id="tags-standards">
+      <thead>
+        <tr class="c1">
+          <th class="text-center"></th>
+          <th class="text-center">Guest User</th>
+          <th class="text-center">Regular User</th>
+          <th class="text-center">Data Champion / HoP</th>
+          <th class="text-center">Data Manager</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="c1">
+          <td class="text-center">View Open Datasets</td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td class="text-center">Register</td>
+          <td class="text-center"></td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td class="text-center">Create and Manage Groups</td>
+          <td class="text-center"></td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td class="text-center">Manage Programme Groups</td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td class="text-center">Access all datasets/groups</td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td class="text-center">Access to Geonode Admmin</td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <ul class="list-group">
+      <li class="list-group-item"><a href="#guest">Guest User</a></li>
+      <li class="list-group-item"><a href="#regular">Regular User</a></li>
+      <li class="list-group-item"><a href="#champion">Data Champions and Heads of Programme</a></li>
+      <li class="list-group-item"><a href="#manager">Data Manager</a></li>
+      <li class="list-group-item"><a href="#role">Roles Table</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

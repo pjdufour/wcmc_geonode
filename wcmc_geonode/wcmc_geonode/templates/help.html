@@ -1,0 +1,27 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "User Guide" %} - {{ block.super }} {% endblock %}
+
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>WCMC GeoNode Help</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead">This page provides helpful information about how to use the WCMC GeoNode. You can use the sidebar links to navigate to what you want to know.</p>
+    <p>WCMC Geonode is our official dataset repository and it provides access both for internal and external users. It also provides a map editing application that allows users to browse existing maps and contribute their own. It is also possible to access it through WFS and WMS</p>
+  </div>
+  <div class="col-md-4">
+  <ul class="list-group">
+    <li class="list-group-item"><h3>{% trans "Sections" %}</h3></li>
+    <li class="list-group-item"><a href="/help/layers">Layers</a></li>
+    <li class="list-group-item"><a href="/help/maps">Maps</a></li>
+    <li class="list-group-item"><a href="/help/documents">Documents</a></li>
+    <li class="list-group-item"><a href="/help/people">People</a></li>
+    <li class="list-group-item"><a href="/help/groups">Groups</a></li>
+  </ul>
+</div>
+</div>
+{% endblock %}

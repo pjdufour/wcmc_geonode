@@ -1,0 +1,218 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "User Guide" %} - {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>Documents</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p>Despite not being its main focus, UNEP-WCMC Geonode is an excellent place to store documents and search for them.</p>
+    <p>The Documents tab also allows attaching information to Geographic layers when metadata fields do not have all the information needed </p>
+    <h3 id="document-browsing">Browsing and Searching</h3>
+    <p>All documents can be browsed and searched by clicking on the <a href="/documents">Documents</a> tab. You will be able to filter results by Text, Type, Categories, Keywords, Owners, Date, Regions and Extent.</p>
+    <h3 id="formats">Formats</h3>
+    <p>Documents can be uploaded in the following formats:</p>
+    <h4>Portable Documents</h4>
+    <ul>
+      <li>.pdf</li>
+    </ul>
+    <h4>Text Documents</h4>
+    <ul>
+      <li>.doc</li>
+      <li>.docx</li>
+      <li>.odt</li>
+      <li>.txt</li>
+    </ul>
+    <h4>Image FIles</h4>
+    <ul>
+      <li>.gif</li>
+      <li>.jpg</li>
+      <li>.jpeg</li>
+      <li>.png</li>
+      <li>.tif</li>
+      <li>.tiff</li>
+    </ul>
+    <h4>Spreadsheets</h4>
+    <ul>
+      <li>.xls</li>
+      <li>.xlsx</li>
+      <li>.ods</li>
+    </ul>
+    <h4>Presentations</h4>
+    <ul>
+      <li>.odp</li>
+      <li>.ppt</li>
+      <li>.pptx</li>
+    </ul> 
+    <h4>Compressed Files</h4>
+    <ul>
+      <li>.rar</li>
+      <li>.zip</li>
+      <li>.gz</li>
+    </ul>
+    <h4>XML based files</h4>
+    <ul>
+      <li>.sld</li>
+      <li>.xml</li>
+    </ul> 
+
+   <h3 id="additional-meta">Additional Metadata for Geospatial Layers</h3>
+   <p>When you need to attach documents to datasets you can use the link to option to find the dataset you have just added to UNEP-WCMC Geonode. In this case you will need to provide information about this attached document in the metadata fields (which should be different from the Metadata fields for the entire dataset). You should follow the instructions below to add your files to the system.</p>
+
+   <h3 id="adding-docs">Adding Documents</h3>
+    <p>The process of uploading document depends on if the data was produced in the centre or if it has external sources.</p>
+    <p>The workflow on importing GIS datasets is described on the following diagrams both for produced internally data and externally sourced:</p>
+
+    <table class="table" id="gis-sops">
+      <thead>
+        <tr class="c1">
+          <th class="text-center">Produced Data</th>
+          <th class="text-center">External Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="c1">
+          <td class="text-center"><a href="{{ STATIC_URL }}img/other_produced_data.png"><img src="{{ STATIC_URL }}img/other_produced_data_thumb.png" /></a></td>
+          <td class="text-center"><a href="{{ STATIC_URL }}img/other_external_data.png"><img src="{{ STATIC_URL }}img/other_external_data_thumb.png" /></a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The workflow is similar but the license to use depends on the source for external data and on you or the Data Champion of your programme for produced data.</p>
+    <p> The steps are: Renaming According to Naming Standards, Uploading Files, License and Permissions Management, Adding Metadata.</p>
+    
+    <h3 id="renaming">Renaming According to Standards</h3>
+    <p>Before uploading the file you must check if both its name and its attribute table comply with UNEP-WCMC naming standards.</p>
+    
+    <h3 id="uploading-files">Uploading Files</h3>
+    <p>Depending on the file size it can take some time to upload. While you wait you can set the permissions for the dataset. If you have multiple files you should compress them all together.</p>
+    
+    <h3 id="license-management">License and Permissions Management</h3>
+    <p>If you do not know which License to use, please contact the Data Champion of your programme. If you already know which License applies to your data, you can set up the permissions on the right side of the page. If you think that License has not been used before in UNEP-WCMC you will also need to contact the Data Champion of your programme so he/she can add it to the Licenses list.</p>
+    
+    <h3 id="adding-metadata">Adding Metadata</h3>
+    <p>This is the most important and also the most time-consuming task. Information about the different fields is provided when you mouseover each box.</p>
+    <p>If there is other information about the dataset that might be relevant you should add as a document linked to this dataset. To do that fill in the metadata and then follow the instruction about adding documents to UNEP-WCMC Geonode</p>
+    
+    <h4>Owner</h4>
+    <p>Name of the person responsible for this dataset and its metadata</p>
+    <h4>Title</h4>
+    <p>Name by which the cited resource is known. Should be concise and easily searchable</p>
+    <h4>Date</h4>
+    <p>Date when the cited resource was produced (it can be an estimate). If there is no information provided, it should be the date when the resource was published or revised.</p>
+    <h4>Date Type</h4>
+    <p>Identification if the date above refers to Publication, Creation or Revision.</p>
+    <h4>Edition</h4>
+    <p>If the dataset is part of a series (e.g. WDPA) this field should be used for the edition. Not to be used for versioning.</p>
+    <h4>Abstract</h4>
+    <p>Brief narrative summary of the content of the resource(s).</p>
+    <h4>Purpose</h4>
+    <p>Summary of the intentions with which the resource(s) was developed.</p>
+    <h4>Maintenance Frequency</h4>
+    <p>Frequency with which modifications and deletions are made to the data after it is first produced.</p>
+    <h4>Region</h4>
+    <p>If the document refers to a spatial extend. Global/Region/Country</p>
+    <h4>Restrictions / Other Restrictions</h4>
+    <p>Limitation(s) placed upon the access or use of the data</p>
+    <h4>License</h4>
+    <p>License of the document. If it is not listed please contact the Data Champion of your programme</p>
+    <h4>Language</h4>
+    <p>Language used within the document</p>
+    <h4>Spatial Representation Type</h4>
+    <p>Format of the information used to represent a Geographical document. Not to be used for non spatial documents.</p>
+    <h4>Temporal extent (start and end)</h4>
+    <p>Time period covered by the content of the document</p>
+    <h4>Supplemental Information</h4>
+    <p>Supplemental Information should be added when relevant. Should be included:</p>
+    <ul>DOI</ul>
+    <ul>Original File Name</ul>
+    <ul>wcmc.io link</ul>
+    <h4>Distribution URL</h4>
+    <p>URL automatically defined by geonode with a link to the resource page</p>
+    <h4>Distribution Description</h4>
+    <p>Detailed text description of what the online resource is/does</p>
+    <h4>Data Quality Statement</h4>
+    </p>General explanation of the data producer's knowledge about the lineage of the document stating the level of reliability it has.</p>
+    <h4>Featured</h4>
+    <p>Check if this resource should be advertised in the homepage</p>
+    <h4>Is Published</h4>
+    <p>Check if this resource should be published and searchable</p>
+    <h4>Thumbnail url</h4>
+    <p>Link to the image used as thumbnail for the resource (automatically set by UNEP-WCMC Geonode)</h4>
+    <h4>Keywords</h4>
+    <p>Commonly used word(s) or formalised word(s) or phrase(s) used to describe the subject (space or comma-separated).</p>
+    <table class="table" id="tags-standards">
+      <thead>
+        <tr class="c1">
+          <th>Tags</th>
+          <th>Type</th>
+          <th>Mandatory</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="c1">
+          <td>Scale (e.g. Regional, Global, Country)</td>
+          <td>String, Text, ISO3 Codes</td>
+          <td></td>
+        </tr>
+        <tr class="c1">
+          <td>Theme (e.g. Bluecarbon, CITES, habitats)</td>
+          <td>String, Text</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td >Output (e.g. Brochure, Report, Tech Brief, Infographic)</td>
+          <td>String, Text</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td>Client (e.g. GEF, IUCN, internal)</td>
+          <td>String, Text</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td>Partners</td>
+          <td>String, Text</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr class="c1">
+          <td>Provider (e.g. IUCN, Microsoft)</td>
+          <td>String, Text</td>
+          <td></td>
+        </tr>
+        <tr class="c1">
+          <td>Format (e.g. xls, csv, docx, tiff)</td>
+          <td>String, Text</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Point of Contact</h4>
+    <p>Person to be contacted regarding this resource.</p>
+    <h4>Metadata Author</h4>
+    <p>Person that has authored the metadata</p>
+    <h4>Link to:</h4>
+    <p>To be used when the document refers do a Geographic Dataset</p>
+    <h4>Category</h4>
+    <p>High-level geographic data thematic classification to assist in the grouping and search of available documents.</p>
+    
+    <h3 id="final-control">Final Control</h3>
+    <p>After all this work your dataset is now on UNEP-WCMC Geonode! You can now try to find browsing on the Layers tab or Searching for it</p>
+    </div>
+    <div class="col-md-4">
+    <ul class="list-group">
+      <li class="list-group-item"><a href="#document-browsing">Browsing and Searching</a></li>
+      <li class="list-group-item"><a href="#formats">Formats</a></li>
+      <li class="list-group-item"><a href="#additional-meta">Additional Metadata for Geospatial Layers</a></li>
+      <li class="list-group-item"><a href="#adding-docs">Adding Documents</a></li>
+      <li class="list-group-item"><a href="#renaming">Renaming According to Standards</a></li>
+      <li class="list-group-item"><a href="#uploading-files">Uploading Files</a></li>
+      <li class="list-group-item"><a href="#license-management">License and Permissions Management</a></li>
+      <li class="list-group-item"><a href="#adding-metadata">Adding Metadata</a></li>
+      <li class="list-group-item"><a href="#final-control">Final Control</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
