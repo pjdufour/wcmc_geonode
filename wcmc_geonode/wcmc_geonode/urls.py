@@ -12,4 +12,5 @@ urlpatterns = patterns('',
    url(r'^help/documents?$', TemplateView.as_view(template_name='help/documents.html'), name='helpdocuments'),
    url(r'^help/people?$', TemplateView.as_view(template_name='help/people.html'), name='helppeople'),
    url(r'^help/groups?$', TemplateView.as_view(template_name='help/groups.html'), name='helpgroups'),
+   url(r'^help/naming-standards?$', TemplateView.as_view(template_name='help/naming-standards.html'), name='helpnamingstandards'),
  ) + urlpatterns
