@@ -2,7 +2,7 @@
 
 {% load i18n %}
 {% block extra_head %}
-      <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
+      <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>      
 {% endblock %}
  {% block tabs %}
  <li id="nav_layers">
@@ -23,4 +23,8 @@
 <li id="nav_help">
 	<a href="/help">Help</a>
 </li>
+{% endblock %}
+
+{% block extra_footer %}
+	<script src="{{ STATIC_URL }}js/site_base.js"></script>
 {% endblock %}
