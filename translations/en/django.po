@@ -167,7 +167,8 @@ msgstr "Category is required."
 
 #: base/forms.py:114 groups/models.py:45 people/forms.py:82
 msgid "A space or comma-separated list of keywords"
-msgstr "A space or comma-separated list of keywords"
+msgstr "Commonly used word(s) or formalised word(s) or phrase(s) "
+"used to describe the subject (space or comma-separated)."
 
 #: base/models.py:44 services/models.py:86
 msgid "function performed by the responsible party"
@@ -179,11 +180,12 @@ msgstr "reference date for the cited resource"
 
 #: base/models.py:213
 msgid "identification of when a given event occurred"
-msgstr "identification of when a given event occurred"
+msgstr "Identification if the date above refers to Publication, Creation or Revision."
 
 #: base/models.py:214
 msgid "version of the cited resource"
-msgstr "version of the cited resource"
+msgstr "If the dataset is part of a series (e.g. WDPA) this field " 
+"should be used for the edition. Not to be used for versioning."
 
 #: base/models.py:215
 msgid "brief narrative summary of the content of the resource(s)"
@@ -227,7 +229,8 @@ msgstr ""
 
 #: base/models.py:225
 msgid "license of the dataset"
-msgstr "license of the dataset"
+msgstr "License of the dataset. "
+"If it is not listed please contact the Data Champion of your programme"
 
 #: base/models.py:226
 msgid "language used within the dataset"
@@ -243,7 +246,7 @@ msgstr ""
 
 #: base/models.py:229
 msgid "method used to represent geographic information in the dataset."
-msgstr "method used to represent geographic information in the dataset."
+msgstr "Format of the information used to represent the dataset."
 
 #: base/models.py:230
 msgid "time period covered by the content of the dataset (start)"
@@ -258,8 +261,7 @@ msgid ""
 "information about on-line sources from which the dataset, specification, or "
 "community profile name and extended metadata elements can be obtained"
 msgstr ""
-"information about on-line sources from which the dataset, specification, or "
-"community profile name and extended metadata elements can be obtained"
+"URL automatically defined by geonode with a link to the resource page"
 
 #: base/models.py:234
 msgid "detailed text description of what the online resource is/does"
@@ -270,8 +272,8 @@ msgid ""
 "general explanation of the data producer's knowledge about the lineage of a "
 "dataset"
 msgstr ""
-"general explanation of the data producer's knowledge about the lineage of a "
-"dataset"
+"General explanation of the data producer's knowledge about the lineage"
+"of the dataset stating the level of reliability it has."
 
 #: base/models.py:240
 #: base/templates/base/_resourcebase_contact_snippet.html:10
@@ -285,7 +287,7 @@ msgstr "title"
 
 #: base/models.py:242
 msgid "name by which the cited resource is known"
-msgstr "name by which the cited resource is known"
+msgstr "Name by which the cited resource is known. Should be concise and easily searchable."
 
 #: base/models.py:243
 msgid "date"
@@ -354,7 +356,11 @@ msgstr "supplemental information"
 
 #: base/models.py:284
 msgid "any other descriptive information about the dataset"
-msgstr "any other descriptive information about the dataset"
+msgstr "Supplemental Information should be added when relevant. Should be included:"
+"DOI"
+"Original File Name"
+"wcmc.io link"
+"Reference to mxd, lyr or qgis files"
 
 #: base/models.py:287
 msgid "distribution URL"
@@ -402,7 +408,7 @@ msgstr "Featured"
 
 #: base/models.py:333
 msgid "Should this resource be advertised in home page?"
-msgstr "Should this resource be advertised in home page?"
+msgstr "Check if this resource should be advertised in the homepage"
 
 #: base/models.py:334
 msgid "Is Published"
@@ -410,7 +416,7 @@ msgstr "Is Published"
 
 #: base/models.py:335
 msgid "Should this resource be published and searchable?"
-msgstr "Should this resource be published and searchable?"
+msgstr "Check if this resource should be published and searchable"
 
 #: base/models.py:704
 msgid "For example \"kml\""
@@ -486,7 +492,7 @@ msgstr "Type"
 #: people/templates/people/profile_detail.html:78
 #: templates/search/_general_filters.html:19
 msgid "Keywords"
-msgstr "Keywords"
+msgstr "Keywords (Check <a href=\"help/keywords\">table</a>)"
 
 #: base/templates/base/resourcebase_info_panel.html:72
 #: templates/search/_region_filter.html:5
@@ -1254,27 +1260,27 @@ msgstr "No actions yet"
 #: groups/templates/groups/group_list.html:5
 #: groups/templates/groups/group_list.html:14
 msgid "Explore Groups"
-msgstr "Explore Programmes"
+msgstr "Explore Groups"
 
 #: groups/templates/groups/group_base.html:14
 #: groups/templates/groups/group_create.html:11
 #: groups/templates/groups/group_list.html:12
 msgid "Create a Group"
-msgstr "Create a Programme"
+msgstr "Create a Group"
 
 #: groups/templates/groups/group_base.html:16
 #: groups/templates/groups/group_update.html:11
 msgid "Update Group"
-msgstr "Update Programme"
+msgstr "Update Group"
 
 #: groups/templates/groups/group_base.html:17
 msgid "Remove Group"
-msgstr "Remove Programme"
+msgstr "Remove Group"
 
 #: groups/templates/groups/group_create.html:5
 #: groups/templates/groups/group_update.html:5
 msgid "Create Group"
-msgstr "Create Programme"
+msgstr "Create Group"
 
 #: groups/templates/groups/group_create.html:26
 #: services/templates/services/service_register.html:19
@@ -1294,19 +1300,19 @@ msgstr "Members"
 
 #: groups/templates/groups/group_detail.html:62
 msgid "Edit Group Details"
-msgstr "Edit Programme Details"
+msgstr "Edit Group Details"
 
 #: groups/templates/groups/group_detail.html:63
 msgid "Manage Group Members"
-msgstr "Manage Programme Members"
+msgstr "Manage Group Members"
 
 #: groups/templates/groups/group_detail.html:64
 msgid "Delete this Group"
-msgstr "Delete this Programme"
+msgstr "Delete this Group"
 
 #: groups/templates/groups/group_detail.html:67
 msgid "Group Activities"
-msgstr "Programme Activities"
+msgstr "Group Activities"
 
 #: groups/templates/groups/group_detail.html:72
 #, python-format
@@ -1338,7 +1344,7 @@ msgstr "Managers"
 
 #: groups/templates/groups/group_list.html:12
 msgid "Create a New Group"
-msgstr "Create a New Programme"
+msgstr "Create a New Group"
 
 #: groups/templates/groups/group_invite_response.html:10
 msgid "Membership Request"
@@ -1350,7 +1356,7 @@ msgstr "Don't Join"
 
 #: groups/templates/groups/group_invite_response.html:15
 msgid "Join Group"
-msgstr "Join Programme"
+msgstr "Join Group"
 
 #: groups/templates/groups/group_list.html:19
 #: people/templates/people/profile_list.html:13
@@ -1412,7 +1418,7 @@ msgstr ""
 
 #: groups/templates/groups/group_remove_maps_data.html:6
 msgid "Remove Maps/Data from Group"
-msgstr "Remove Maps/Data from Programme"
+msgstr "Remove Maps/Data from Group"
 
 #: groups/templates/groups/group_remove_maps_data.html:15
 msgid "Remove selected maps/data"
@@ -2851,7 +2857,7 @@ msgstr "No user could be found with that email address."
 
 #: people/templates/people/_profile_about_item.html:18
 msgid "No Group"
-msgstr "No Programme"
+msgstr "No Group"
 
 #: people/templates/people/_profile_filters.html:4
 msgid "All contents"
@@ -3151,7 +3157,7 @@ msgstr "Abstract:"
 
 #: services/templates/services/service_detail.html:46
 msgid "Keywords:"
-msgstr "Keywords:"
+msgstr "Keywords: (Check <a href=\"help/keywords\">table</a>)"
 
 #: services/templates/services/service_detail.html:47
 msgid "Contact:"
@@ -3299,7 +3305,7 @@ msgstr "People"
 
 #: templates/500.html:69 templates/base.html:70
 msgid "Groups"
-msgstr "Programmes"
+msgstr "Groups"
 
 #: templates/500.html:89 templates/base.html:90
 msgid "Register"
@@ -4709,7 +4715,7 @@ msgstr "Send Reply"
 #~ msgstr "Remote Thumbnail"
 
 #~ msgid "Group details"
-#~ msgstr "Programme details"
+#~ msgstr "Group details"
 
 #~ msgid "Create a map"
 #~ msgstr "Create a map"

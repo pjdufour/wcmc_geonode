@@ -1,0 +1,1057 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "User Guide" %} - {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>UNEP-WCMC Naming Standards</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <h3 id="file-folder">File and Folder Names (Including Table names)</h3>
+<p>
+<br>
+</p>
+<h4 id="general-rules">General rules</h4>
+<p>They must be:</p>
+<ul>
+  <li>
+  Unique</li><li>
+  Indicative of what the file contains</li><li>
+  plural</li>
+</ul>
+<p>Other Rules:</p>
+<ul>
+  <li>
+  The characters used must be A..Z, 0..9 and underscore(_).</li><li>
+  Underscore is used as text delimeter</li><li>
+  Spaces are not allowed</li><li>
+  All characters must be downcased</li>
+  <li>Name elements should be ordered from general to specific detail of
+importance as much as possible.</li>
+  </ul>
+<p>
+<br>
+</p>
+<h4 id="forbidden-words">Forbidden words</h4>
+<ul>
+  <li>
+  Test</li><li>
+  Final</li><li>
+  Edit</li><li>
+  Temp</li><li>
+  Full name of author</li><li>
+  Clean</li><li>
+  final_working</li><li>
+  Working</li><li>
+  Annotated</li><li>
+  Long file/folder names (more than 25 characters)</li><li>
+  Copy</ul>
+<p>
+</p>
+<p>
+<br>
+</p>
+<h4 id="prefixes"></a>
+Prefixes</h4>
+<p>
+The three optional prefixes that should be placed in the same order
+as they are in the table:</p>
+<table class="table">
+  <col>
+  <col>
+  <col>
+  <col>
+  <tr>
+    <td>
+      <p>
+      <b>Order</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Prefixes</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Type</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Mandatory</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      1</p>
+    </td>
+    <td>
+      <p>
+      Category</p>
+    </td>
+    <td>
+      <p>
+      Standard
+      code</p>
+    </td>
+    <td>
+      <p>Only
+      for GIS</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      2</p>
+    </td>
+    <td>
+      <p>
+      Extent</p>
+    </td>
+    <td>
+      <p>
+      Standard
+      Code</p>
+    </td>
+    <td>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      3</p>
+    </td>
+    <td>
+      <p>
+      Project</p>
+    </td>
+    <td>
+      <p>
+      Deltek
+      Code</p>
+    </td>
+    <td>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      4</p>
+    </td>
+    <td>
+      <p>
+      Author</p>
+    </td>
+    <td>
+      <p>
+      Surname
+      + 1st Initial</p>
+    </td>
+    <td>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+</table>
+<p>
+<br>
+</p>
+<h5 id="categories">
+Categories</h5>
+<p>
+The categories in UNEP-WCMC Geonode foollow ISO 19115:2003 Metadata
+Standards. The prefixes should have the codes given in the following
+table:</p>
+<p>
+<br>
+</p>
+<table class="table" id="categories">
+  <tr>
+    <td>
+      <p>
+      Code</p>
+    </td>
+    <td>
+      <p>
+      Name</p>
+    </td>
+    <td>
+      <p>
+      Definition</p>
+    </td>
+    <td>
+      <p>
+      Examples</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>001</p>
+    </td>
+    <td>
+      <p>Farming</p>
+    </td>
+    <td>
+      <p>rearing
+      of animals and/or cultivation of plants</p>
+    </td>
+    <td>
+      <p>agriculture,
+      irrigation, aquaculture, plantations, herding, pests and diseases
+      affecting crops and livestock</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>002</p>
+    </td>
+    <td>
+      <p>Biota</p>
+    </td>
+    <td>
+      <p>flora
+      and/or fauna in natural environment 
+      </p>
+    </td>
+    <td>
+      <p>wildlife,
+      vegetation, biological sciences, ecology, wilderness, sealife,
+      wetlands, habitat</p>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>003</p>
+    </td>
+    <td>
+      <p>Boundaries</p>
+    </td>
+    <td>
+      <p>legal
+      land descriptions</p>
+    </td>
+    <td>
+      <p>political
+      and administrative boundaries</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>004</p>
+    </td>
+    <td>
+      <p>Climatology
+      Meteorology 
+      </p>
+      <p>Atmosphere</p>
+    </td>
+    <td>
+      <p>processes
+      and phenomena of the atmosphere.</p>
+    </td>
+    <td>
+      <p>cloud
+      cover, weather, climate, atmospheric conditions, climate change,
+      precipitation</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>005</p>
+    </td>
+    <td>
+      <p>Economy</p>
+    </td>
+    <td>
+      <p>economic
+      activities, conditions and employment. 
+      </p>
+    </td>
+    <td>
+      <p>production,
+      labour, revenue, commerce, industry, tourism and ecotourism,
+      forestry, fisheries, commercial or subsistence hunting,
+      exploration and exploitation of resources such as minerals, oil
+      and gas</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>006</p>
+    </td>
+    <td>
+      <p>Elevation</p>
+    </td>
+    <td>
+      <p>height
+      above or below sea level 
+      </p>
+    </td>
+    <td>
+      <p>altitude,
+      bathymetry, digital elevation models, slope, derived products</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>007</p>
+    </td>
+    <td>
+      <p>Environment</p>
+    </td>
+    <td>
+      <p>environmental
+      resources, protection and conservation</p>
+    </td>
+    <td>
+      <p>environmental
+      pollution, waste storage and treatment, environmental impact
+      assessment, monitoring environmental risk, nature reserves,
+      landscape</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>008</p>
+    </td>
+    <td>
+      <p>Geoscientific
+      Information</p>
+    </td>
+    <td>
+      <p>information
+      pertaining to earth sciences</p>
+    </td>
+    <td>
+      <p>geophysical
+      features and processes, geology, minerals, sciences dealing with
+      the composition, structure and origin of the earth’s rocks,
+      risks of earthquakes, volcanic activity, landslides, gravity
+      information, soils, permafrost, hydrogeology, erosion</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>009</p>
+    </td>
+    <td>
+      <p>Health</p>
+    </td>
+    <td>
+      <p>health,
+      health services, human ecology, and safety 
+      </p>
+    </td>
+    <td>
+      <p>disease
+      and illness, factors affecting health, hygiene, substance abuse,
+      mental and physical health, health services</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>010</p>
+    </td>
+    <td>
+      <p>Imagery
+      Base Maps Earth Cover</p>
+    </td>
+    <td>
+      <p>base
+      maps 
+      </p>
+    </td>
+    <td>
+      <p>land
+      cover, topographic maps, imagery, unclassified images, annotations</p>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>011</p>
+    </td>
+    <td>
+      <p>Intelligence
+      / Military</p>
+    </td>
+    <td>
+      <p>military
+      bases, structures, activities 
+      </p>
+    </td>
+    <td>
+      <p>barracks,
+      training grounds, military transportation, information collection</p>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>012</p>
+    </td>
+    <td>
+      <p>Inland
+      Waters</p>
+    </td>
+    <td>
+      <p>inland
+      water features, drainage systems and their characteristics</p>
+    </td>
+    <td>
+      <p>rivers
+      and glaciers, salt lakes, water utilization plans, dams, currents,
+      floods, water quality, hydrographic charts</p>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>013</p>
+    </td>
+    <td>
+      <p>Location</p>
+    </td>
+    <td>
+      <p>positional
+      information and services 
+      </p>
+    </td>
+    <td>
+      <p>addresses,
+      geodetic networks, control points, postal zones and services,
+      place names</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>014</p>
+    </td>
+    <td>
+      <p>Oceans</p>
+    </td>
+    <td>
+      <p>features
+      and characteristics of salt water bodies (excluding inland waters)
+      
+      </p>
+    </td>
+    <td>
+      <p>tides,
+      tidal waves, coastal information, reefs</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>015</p>
+    </td>
+    <td>
+      <p>Planning
+      Cadastre</p>
+    </td>
+    <td>
+      <p>information
+      used for appropriate actions for future use of the land 
+      </p>
+    </td>
+    <td>
+      <p>land
+      use maps, zoning maps, cadastral surveys, land ownership</p>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>016</p>
+    </td>
+    <td>
+      <p>Society</p>
+    </td>
+    <td>
+      <p>characteristics
+      of society and cultures</p>
+    </td>
+    <td>
+      <p>settlements,
+      anthropology, archaeology, education, traditional beliefs, manners
+      and customs, demographic data, recreational areas and activities,
+      social impact assessments, crime and justice, census information</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>017</p>
+    </td>
+    <td>
+      <p>Structure</p>
+    </td>
+    <td>
+      <p>man-made
+      construction 
+      </p>
+    </td>
+    <td>
+      <p>Examples:
+      buildings, museums, churches, factories, housing, monuments,
+      shops, towers</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>018</p>
+    </td>
+    <td>
+      <p>Transportation</p>
+    </td>
+    <td>
+      <p>means
+      and aids for conveying persons and/or goods 
+      </p>
+    </td>
+    <td>
+      <p>roads,
+      airports/airstrips, shipping routes, tunnels, nautical charts,
+      vehicle or vessel location, aeronautical charts, railways</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>019</p>
+    </td>
+    <td>
+      <p>Utilities
+      Communication</p>
+    </td>
+    <td>
+      <p>energy,
+      water and waste systems and communications infrastructure and
+      services 
+      </p>
+    </td>
+    <td>
+      <p>hydroelectricity,
+      geothermal, solar and nuclear sources of energy, water
+      purification and distribution, sewage collection and disposal,
+      electricity and gas distribution, data communication,
+      telecommunication, radio, communication networks</p>
+    </td>
+  </tr>
+</table>
+<p>
+<br>
+</p>
+<h5 id="extent">
+Extent</h5>
+<p>
+For extent prefixes the ISO 3166-1 alpha-2 norm for countries and
+their subdivisions should be used. Those codes can be found <a href="https://www.iso.org/obp/ui/#search">here</a>.</p>
+<p>
+For broader regions the <a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">UN</a><a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">
+</a><a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">M</a><a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">.49</a>
+standard should be used. The codes are on following table:</p>
+<p>
+        </p>
+<table class="table" id="region-codes">
+  <tr>
+    <td>
+      <p>
+      <b>Code</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Area</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>001</b></p>
+    </td>
+    <td>
+      <p>
+      <b>World</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>002</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Africa</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      015</p>
+    </td>
+    <td>
+      <p>
+      Northern
+      Africa</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      014</p>
+    </td>
+    <td>
+      <p>
+      Eastern
+      Africa</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      017</p>
+    </td>
+    <td>
+      <p>
+      Middle
+      Africa</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      018</p>
+    </td>
+    <td>
+      <p>
+      Southern
+      Africa</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      011</p>
+    </td>
+    <td>
+      <p>
+      Western
+      Africa</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>019</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Americas</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>419</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Latin
+      America and the Caribbean</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      029</p>
+    </td>
+    <td>
+      <p>
+      Caribbean</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      013</p>
+    </td>
+    <td>
+      <p>
+      Central
+      America</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      005</p>
+    </td>
+    <td>
+      <p>
+      South
+      America</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>021</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Northern
+      America</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>142</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Asia</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      143</p>
+    </td>
+    <td>
+      <p>
+      Central
+      Asia</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      030</p>
+    </td>
+    <td>
+      <p>
+      Eastern
+      Asia</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      034</p>
+    </td>
+    <td>
+      <p>
+      Southern
+      Asia</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      035</p>
+    </td>
+    <td>
+      <p>
+      South-Eastern
+      Asia</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      145</p>
+    </td>
+    <td>
+      <p>
+      Western
+      Asia</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>150</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Europe</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      151</p>
+    </td>
+    <td>
+      <p>
+      Eastern
+      Europe</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      154</p>
+    </td>
+    <td>
+      <p>
+      Northern
+      Europe</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      039</p>
+    </td>
+    <td>
+      <p>
+      Southern
+      Europe</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      155</p>
+    </td>
+    <td>
+      <p>
+      Western
+      Europe</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      <b>009</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Oceania</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      053</p>
+    </td>
+    <td>
+      <p>
+      Australia
+      and New Zealand</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      054</p>
+    </td>
+    <td>
+      <p>
+      Melanesia</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      057</p>
+    </td>
+    <td>
+      <p>
+      Micronesia</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      061</p>
+    </td>
+    <td>
+      <p>
+      Polynesia</p>
+    </td>
+  </tr>
+</table>
+<p>
+<br>
+</p>
+<h4 id="suffixes">
+Suffixes</h4>
+<p>
+<br>
+</p>
+<p>
+In terms of suffixes, only the Version is mandatory. Timestamps
+should only be used for regular releases of data (e.g. WDPA). In the
+following table we list both of them, the order starts from the end
+of the filename to the beginning.</p>
+<p>
+<br>
+</p>
+<table class="table">
+  <tr>
+    <td>
+      <p>
+      <b>Order
+      (Desc)</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Suffixes</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Type</b></p>
+    </td>
+    <td>
+      <p>
+      <b>Mandatory</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      1</p>
+    </td>
+    <td>
+      <p>
+      Version</p>
+    </td>
+    <td>
+      <p>
+      Version
+      Rules (see below)</p>
+    </td>
+    <td>
+      <p>
+      ✓</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+      2</p>
+    </td>
+    <td>
+      <p>
+      Timestamp</p>
+    </td>
+    <td>
+      <p>
+      Timestamp
+      Rules (See below)</p>
+    </td>
+    <td>
+      <p>
+      <br>
+      </p>
+    </td>
+  </tr>
+</table>
+<p>
+<br>
+</p>
+<h5 id="versions">
+Versions</h5>
+<p>
+Suggested Versioning in the development process:</p>
+<ul>
+  <li>
+  Must be the last element of the filename following a “v”</li><li>
+  Must have a X-YY-ZZ format</li><li>
+  X rules:</li>
+  <ul>
+    <li>
+    X is for major versions</li>
+    <li>
+    0 when the document is still being written/developed</li>
+    <li>
+    1 is for the first version without reviews</li>
+    <li>
+    2 is for final version candidate</li>
+    <li>
+    3 is for final version</li>
+  </ul>
+</ul>
+<p>
+<br><br>
+</p>
+<ul>
+  <li>
+  YY is for changes inside an X version</li><li>
+  ZZ is for minor fixes in a YY version</ul>
+<h5 id="timestamps">
+Timestamps</h5>
+<ul>
+  <li>
+  Dates should be ordered: YEAR, MONTH, DAY. (e.g. YYYYMMDD, YYYYMMDD,
+  YYYYMM). 
+  </li><li>
+  Time should be ordered: HOUR, MINUTES, SECONDS (HHMMSS)</li><li>
+  More specific dates/time can be ignored (e.g. for a monthly release
+  201601 is enough)</li></ul>
+<h4></a>
+Reserved words</h4>
+<p>
+The reserved words in this <a href="http://www.postgresql.org/docs/current/static/sql-keywords-appendix.html">list</a> must be avoided.</p>
+<h3 id="column-names">
+Column Names</h3>
+<ul>
+  <li>
+  The characters used must be A..Z, 0..9 and underscore(_).</li><li>
+  0..9 and underscore (_) cannot be used as first character of the
+  collumn 
+  </li><li>
+  Underscore is used as text delimeter</li><li>
+  Spaces are not allowed</li><li>
+  All characters must be downcased</li><li>
+  Foreign must be singular (e.g. country_id)</li></ul>
+
+<p>
+The reserved words in this <a href="http://www.postgresql.org/docs/current/static/sql-keywords-appendix.html">list</a> must be avoided:</p>
+  </div>
+  <div class="col-md-4">
+    <div class="just-padding">
+    <div class="list-group list-group-root well">
+      <a href="#file-list" class="list-group-item" data-toggle="collapse"> 
+        File and Folder Names (Including Table names)
+        </a>
+      <div  class="list-group collapse" id="file-list">
+        <a href="#general-rules" class="list-group-item">General Rules</a>
+        <a href="#forbidden-words" class="list-group-item">Forbidden Words</a>
+        <a href="#prefixes-list" class="list-group-item" data-toggle="collapse"> Prefixes</a>
+        <div class="list-group collapse" id="prefixes-list">
+          <a href="#categories" class="list-group-item">Categories</a>
+          <a href="#extent" class="list-group-item">Extent</a>
+        </div>
+        <a href="#suffixes-list" class="list-group-item" data-toggle="collapse"> Suffixes</a>
+        <div class="list-group collapse" id="suffixes-list">
+          <a href="#versions" class="list-group-item">Versions</a>
+          <a href="#timestamps" class="list-group-item">Timestamps</a>
+        </div>
+        <a href="#ŕeserved-words" class="list-group-item">Reserved Words</a>
+      </div>
+      <a href="#column-names" class="list-group-item">Column Names</a>
+    </div>
+    </div>
+  </div>
+{% endblock %}
