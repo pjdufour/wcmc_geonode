@@ -6,11 +6,10 @@ set :repo_url,  "https://github.com/unepwcmc/wcmc_geonode.git"
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory $
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "geonode"                          # Your HTTP server, Apache/etc
+# Your HTTP server, Apache/etc
 
 set :branch, "master"
 set :scm_username, "migtorres"
-
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
@@ -27,5 +26,5 @@ set :scm_username, "migtorres"
 #   end
 # end
 
-set :deploy_to, "/home/ubuntu/#{application}"
+set :deploy_to, "/home/wcmc/#{application}"
 set :normalize_asset_timestamps, false
