@@ -29,7 +29,7 @@ On this project's root directory run:
 
 You  should copy the local_settings.py file to this project. The usual command, from the project's root is:
   ```
-  cp /usr/local/lib/python2.7/dist-packages/geonode/local_settings.py wcmc_geonode/wcmc_geonode/
+  cp /usr/local/lib/python2.7/dist-packages/geonode/local_settings.py /path/to/wcmc_geonode/current/wcmc_geonode/
   ```
 
 The path to the original location of local_settings.py file may differ.
@@ -48,19 +48,20 @@ Edit the file /etc/apache2/sites-available/geonode.conf and change the following
 to:
 
   ```
-    WSGIScriptAlias / /path/to/my_geonode/my_geonode/wsgi.py
+    WSGIScriptAlias / /path/to/wcmc_geonode/current/wcmc_geonode/wcmc_geonode/wsgi.py
   ```
 
-Add the "Directory" directive for your folder like the following example:
+In the same file add the "Directory" directive for your folder like the following example:
 
     ```
-    <Directory "/home/vagrant/my_geonode/my_geonode/">
-       Order allow,deny
-       Options Indexes FollowSymLinks
-       Allow from all
-       Require all granted
-       IndexOptions FancyIndexing     
+    <Directory "/path/to/wcmc_geonode/current/wcmc_geonode/wcmc_geonode/">
+        Order allow,deny
+        Options Indexes FollowSymLinks
+        Allow from all
+        Require all granted
+        IndexOptions FancyIndexing
     </Directory>
+
     ```
 
 Restart apache::
