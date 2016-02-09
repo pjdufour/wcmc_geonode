@@ -1,6 +1,6 @@
 application = "wcmc_geonode"
 set :application, "wcmc_geonode"
-set :username, 'ubuntu'
+set :username, 'wcmc'
 set :repo_url,  "https://github.com/unepwcmc/wcmc_geonode.git"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory $
