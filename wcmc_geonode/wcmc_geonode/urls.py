@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from geonode.urls import *
 
 urlpatterns = patterns('',
+   url(r'^profile/password/$', 'django_ldapbackend.views.password_change'), (r'^profile/password/changed/$', 'django.contrib.auth.views.password_change_done'),
    url(r'^/?$',
        TemplateView.as_view(template_name='site_index.html'),
        name='home'),
