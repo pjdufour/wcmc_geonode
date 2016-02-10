@@ -99,3 +99,27 @@ To deploy you should run:
 ```
 cap deploy setup:collectstatic
 ```
+
+#LDAP authentication
+WCMC Geonode uses LDAP to migrate the WCMC users to Django users. In order to configure this kind of authentication you should add the following to local_settings.py file:
+
+```
+import ldap
+from django_auth_ldap.config import LDAPSearch, NestedActiveDirectoryGroupType```
+
+```
+AUTH_LDAP_SERVER_URI = "ldap://internal_ldap_server:389"
+AUTH_LDAP_BIND_DN = "CN=ldaplookup,OU=Something,DC=Anotherthing,DC=SOmethingelse"
+AUTH_LDAP_BIND_PASSWORD = "Password_Here"
+AUTH_LDAP_USER_SEARCH = LDAPSearch("OU=Something,OU=Anotherthing,DC=Anotherthing,DC=SOmethingelse",
+    ldap.SCOPE_SUBTREE, "(sAMAccountName=%(user)s)")
+
+AUTH_LDAP_CACHE_GROUPS = True
+AUTH_LDAP_GROUP_CACHE_TIMEOUT = 300
+
+AUTH_LDAP_USER_ATTR_MAP = {
+    "first_name": "givenName",
+    "last_name": "sn",
+    "email": "userPrincipalName"
+}
+```
