@@ -21,7 +21,9 @@
 # Django settings for the GeoNode project.
 import os
 from geonode.settings import *
+
 import ldap
+from django_auth_ldap.config import LDAPSearch, NestedActiveDirectoryGroupType
 #
 # General Django development settings
 #
