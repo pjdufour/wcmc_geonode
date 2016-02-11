@@ -21,9 +21,6 @@
 # Django settings for the GeoNode project.
 import os
 from geonode.settings import *
-
-import ldap
-from django_auth_ldap.config import LDAPSearch, NestedActiveDirectoryGroupType
 #
 # General Django development settings
 #
@@ -63,8 +60,4 @@ LOCALE_PATHS = (
 
 #ldap configuration
 
-AUTHENTICATION_BACKENDS = (
-	'django_auth_ldap.backend.LDAPBackend',
-    'django.contrib.auth.backends.ModelBackend',
-    'guardian.backends.ObjectPermissionBackend',
-)
+
