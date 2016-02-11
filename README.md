@@ -100,6 +100,16 @@ To deploy you should run:
 cap deploy setup:collectstatic
 ```
 
+#Requirements
+
+In production, if Geonode was installed with the official package there is no virtual environment. To get things working there are several dependencies on the requirements file.
+
+You should run on the server:
+```
+pip install -r /path/to/wcmc_geonode/current/wcmc_geonode/requirements.txt
+```
+
+
 #LDAP authentication
 WCMC Geonode uses LDAP to migrate the WCMC users to Django users. In order to configure this kind of authentication you should add the following to local_settings.py file:
 
