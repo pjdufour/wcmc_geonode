@@ -106,6 +106,7 @@ In production, if Geonode was installed with the official package there is no vi
 
 You should run on the server:
 ```
+sudo apt-get install libldap2-dev python-dev libsasl2-dev libssl-dev
 pip install -r /path/to/wcmc_geonode/current/wcmc_geonode/requirements.txt
 ```
 
