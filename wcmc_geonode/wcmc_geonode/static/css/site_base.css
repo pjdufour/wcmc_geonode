@@ -7,6 +7,10 @@
 	background: url(../img/background.jpg) no-repeat;
 }
 
+.jumbotron a {
+    color: #028baf;
+}
+
 .just-padding {
   padding: 15px;
 }
