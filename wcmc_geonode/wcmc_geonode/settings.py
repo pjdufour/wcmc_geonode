@@ -27,6 +27,13 @@ from geonode.settings import *
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 SITENAME = 'wcmc_geonode'
 
+ALLOWED_DOCUMENT_TYPES = [
+    'doc', 'docx', 'gif', 'jpg', 'jpeg', 'ods', 'odt', 'odp', 'pdf', 'png', 'ppt',
+    'pptx', 'rar', 'sld', 'tif', 'tiff', 'txt', 'xls', 'xlsx', 'xml', 'zip', 'gz',
+    'mxd'
+]
+MAX_DOCUMENT_SIZE = 100  # MB
+
 # Defines the directory that contains the settings file as the LOCAL_ROOT
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -58,6 +65,5 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
-#ldap configuration
 
 
