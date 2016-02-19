@@ -488,7 +488,7 @@ msgstr "Type"
 #: people/templates/people/profile_detail.html:78
 #: templates/search/_general_filters.html:19
 msgid "Keywords"
-msgstr "Keywords (Check <a href=\"help/keywords\">table</a>)"
+msgstr "Keywords"
 
 #: base/templates/base/resourcebase_info_panel.html:72
 #: templates/search/_region_filter.html:5
@@ -3153,7 +3153,7 @@ msgstr "Abstract:"
 
 #: services/templates/services/service_detail.html:46
 msgid "Keywords:"
-msgstr "Keywords: (Check <a href=\"help/keywords\">table</a>)"
+msgstr "Keywords:"
 
 #: services/templates/services/service_detail.html:47
 msgid "Contact:"
