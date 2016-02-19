@@ -356,11 +356,7 @@ msgstr "supplemental information"
 
 #: base/models.py:284
 msgid "any other descriptive information about the dataset"
-msgstr "Supplemental Information should be added when relevant. Should be included:"
-"DOI"
-"Original File Name"
-"wcmc.io link"
-"Reference to mxd, lyr or qgis files"
+msgstr "Supplemental Information should be added when relevant. (eg. DOI, Original File Name, wcmc.io link, Reference to mxd, lyr or qgis files"
 
 #: base/models.py:287
 msgid "distribution URL"
