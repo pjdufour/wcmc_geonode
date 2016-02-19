@@ -30,7 +30,7 @@ SITENAME = 'wcmc_geonode'
 ALLOWED_DOCUMENT_TYPES = [
     'doc', 'docx', 'gif', 'jpg', 'jpeg', 'ods', 'odt', 'odp', 'pdf', 'png', 'ppt',
     'pptx', 'rar', 'sld', 'tif', 'tiff', 'txt', 'xls', 'xlsx', 'xml', 'zip', 'gz',
-    'mxd'
+    'mxd', 'lyr', 'qgs'
 ]
 MAX_DOCUMENT_SIZE = 100  # MB
 
