@@ -7,54 +7,53 @@
 <div class="page-header">
   <h2>UNEP-WCMC Naming Standards</h2>
 </div>
+<p>This document shows the rules for naming files (including GIS datasets), database tables and columns. There is a set of mandatory rules to be applied to all data and a set of non-mandatory rules. Prefixes and Suffixes are mainly non-mandatory, the only exception is the category code for GIS datasets. If information under prefixes and suffixes is used on a name the rules must be applied even if they are non-mandatory.
+All documents and datasets added to the Data Portal must follow these rules.</p>
 <div class="row">
   <div class="col-md-8">
-    <h3 id="file-folder">File and Folder Names (Including Table names)</h3>
+    <h3 id="file-folder">General Rules (File, Folder, Table and Column Names)</h3>
 <p>
 <br>
 </p>
-<h4 id="general-rules">General rules</h4>
-<p>They must be:</p>
+<h4 id="mandatory-rules">Mandatory Rules</h4>
 <ul>
   <li>
-  Unique</li><li>
-  Indicative of what the file contains</li><li>
-  plural</li>
-</ul>
-<p>Other Rules:</p>
-<ul>
+  They must be unique</li><li>
+  They should be indicative of what the file contains</li>
   <li>
   The characters used must be A..Z, 0..9 and underscore(_).</li><li>
+  Dot (.) should be used only for delimiting file extension</li><li>
   Underscore is used as text delimiter</li><li>
   Spaces are not allowed</li><li>
   All characters must be lowercase</li>
   <li>Name elements should be ordered from general to specific detail of
 importance as much as possible.</li>
+  <li>People names if needed should be in the format Surname + First Initial (e.g. BeckhamD, MessiL)</li>
+  <li>Prefixes and Suffixes are not mandatory (except for categories in GIS datasets) but if they are used their rules and order must be applied</li>
   </ul>
-<p>
-<br>
-</p>
 <h4 id="forbidden-words">Forbidden words</h4>
 <ul>
   <li>
   Test</li><li>
+  Last</li><li>
   Final</li><li>
   Edit</li><li>
   Temp</li><li>
   Full name of author</li><li>
   Clean</li><li>
-  final_working</li><li>
   Working</li><li>
   Annotated</li><li>
   Long file/folder names (more than 25 characters)</li><li>
-  Copy</ul>
+  Copy</li>
+  <li>Version (just "v")</li>
+  </ul>
 <p>
 </p>
 <p>
 <br>
 </p>
 <h4 id="prefixes"></a>
-Prefixes</h4>
+Prefixes (Mainly Non-Mandatory)</h4>
 <p>
 The three optional prefixes that should be placed in the same order
 as they are in the table:</p>
@@ -562,8 +561,7 @@ table:</p>
 <h5 id="extent">
 Extent</h5>
 <p>
-For extent prefixes the ISO 3166-1 alpha-3 norm for countries and
-their subdivisions should be used. Those codes can be found <a href="https://www.iso.org/obp/ui/#search">here</a>.</p>
+For extent prefixes the ISO 3166-1 alpha-3 norm for countries and their subdivisions should be used. Those codes can be found <a href="https://www.iso.org/obp/ui/#search">here</a>.</p>
 <p>
 For broader regions the <a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">UN</a><a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">
 </a><a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">M</a><a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">.49</a>
@@ -895,12 +893,12 @@ standard should be used. The codes are on following table:</p>
 <br>
 </p>
 <h4 id="suffixes">
-Suffixes</h4>
+Suffixes (Non-Mandatory)</h4>
 <p>
 <br>
 </p>
 <p>
-In terms of suffixes, only the Version is mandatory. Timestamps
+In terms of suffixes, all of them are non-mandatory. Timestamps
 should only be used for regular releases of data (e.g. WDPA). In the
 following table we list both of them, the order starts from the end
 of the filename to the beginning.</p>
@@ -998,7 +996,8 @@ Suggested Versioning in the development process:</p>
 <ul>
   <li>
   YY is for changes inside an X version</li><li>
-  ZZ is for minor fixes in a YY version</ul>
+  ZZ is for minor fixes in a YY version</li>
+</ul>
 <h5 id="timestamps">
 Timestamps</h5>
 <ul>
@@ -1009,12 +1008,15 @@ Timestamps</h5>
   Time should be ordered: HOUR, MINUTES, SECONDS (HHMMSS)</li><li>
   More specific dates/time can be ignored (e.g. for a monthly release
   201601 is enough)</li></ul>
-<h4></a>
-Reserved words</h4>
-<p>
-The reserved words in this <a href="http://www.postgresql.org/docs/current/static/sql-keywords-appendix.html">list</a> must be avoided.</p>
-<h3 id="column-names">
-Column Names</h3>
+
+<h3 id="tables-rules">Specific rules for tables</h3>
+<ul>
+  <li>The reserved words in this <a href="http://www.postgresql.org/docs/current/static/sql-keywords-appendix.html">list</a> must be avoided.</li>
+  <li>Table names should be in plural as they list a group of objects(e.g. countries, users, names)</li>
+</ul>
+
+<h4 id="column-names">
+Column Names</h4>
 <ul>
   <li>
   The characters used must be A..Z, 0..9 and underscore(_).</li><li>
@@ -1025,33 +1027,98 @@ Column Names</h3>
   Spaces are not allowed</li><li>
   All characters must be lowercase</li><li>
   Foreign Key must be singular (e.g. country_id)</li></ul>
-
-<p>
-The reserved words in this <a href="http://www.postgresql.org/docs/current/static/sql-keywords-appendix.html">list</a> must be avoided.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="examples-starting">Starting Point</h4>
+<p>Imagine you produced a file with the following name:</p>
+<code>"industries in burkina faso FEBruary 1886??? final final last_edited version6.5 joanna_felix_ag.doc.docx"</code>
+<p><em>OK, This is just an example. Don't go to <a href="http://www.wikipedia.org">wikipedia</a> to search for accuracy errors.</em></p>
+<p>There is a lot to change in this file. Let's do it!</p>
+<h4 id="examples-general">Meeting General Rules</h4>
+<p>There are several rules that are not satisfied in this name:</p>
+<ul>
+  <li>Not allowed characters: ??</li>
+  <code>"microchip industries in burkina faso FEBruary 1886 final final last_edited version6.5 joanna_felix_ag.doc.docx"</code>
+  <li>No Spaces</li>
+  <code>"microchip_industries_in_burkina_faso_FEBruary_1886_final_final_last_edited_version6.5_joanna_felix_ag.doc.docx"</code>
+  <li>Lower case characters: FEBruary</li>
+  <code>"microchip_industries_in_burkina_faso_february_1886_final_final_last_edited_version6.5_joanna_felix_ag.doc.docx"</code>
+  <li>Dot (.) should be used only for delimiting real file extension</li>
+  <code>"microchip_industries_in_burkina_faso_february_1886_final_final_last_edited_version6_5_joanna_felix_ag.docx"</code>
+  <li>Going from general to specific: industries in Burkina Faso</li>
+  <code>"burkina_faso_microchip_industries_february_1886_final_final_last_edited_version6_5_joanna_felix_ag.docx"</code>
+  <li>Naming format: Joanna Felix and ag (Alan Guiness) as prefixes</li>
+  <code>"felixj_guinessa_burkina_faso_microchip_industries_february_1886_final_final_last_edited_version6_5.docx"</code>
+  <li>Date format should be in YYYYMM format as suffix</li>
+  <code>"felixj_guinessa_burkina_faso_microchip_industries_final_final_last_edited_188602_version6_5.docx"</code>
+</ul>
+<h4 id="examples-forbidden">Use of forbidden words</h4>
+<p>The following forbidden words are used on this name:</p>
+<ul>
+  <li>Final</li>
+  <li>Last</li>
+  <li>Edit</li>
+  <li>Version (just "v")</li>
+</ul>
+<code>"felixj_guinessa_burkina_faso_microchip_industries_188602_v6_5.docx"</code>
+<h4 id="examples-nonmandatory">Not Mandatory Changes</h4>
+<p>As it is, our name already is already fulfilling mandatory rules but it can be improved.</p>
+<h5 id="examples-country">Country code</h5>
+<p>Instead of writing down Burkina Faso people can just write this country's ISO3 code:</p>
+<code>bfa_felixj_guinessa_microchip_industries_188602_v6_5.docx</code>
+<h5 id="examples-category">Category code</h5>
+<p>We can also add the category code so it is sortable in an easier way:</p>
+<code>05_bfa_felixj_guinessa_microchip_industries_188602_v6_5.docx</code>
+<h5 id="examples-versioning">Versioning</h5>
+<p>Let's assume that version 6.5 is being is a final version candidate that has been edited for minor changes by ALan Guiness :</p>
+<code>05_bfa_felixj_guinessa_microchip_industries_188602_v2_0_1.docx</code>
+<h4 id="examples-final">Final Result</h4>
+<p>So, from a file named as:</p>
+<code>"industries in burkina faso FEBruary 1886??? final final last_edited version6.5 joanna_felix_ag.doc.docx"</code>
+<p>After applying all the rules we got:</p>
+<code>05_bfa_felixj_guinessa_microchip_industries_188602_v2_0_1.docx</code>
+<p>Short name and easy understandable</p>
   </div>
   <div class="col-md-4">
     <div class="just-padding">
-    <div class="list-group list-group-root well">
-      <a href="#file-list" class="list-group-item" data-toggle="collapse"> 
-        File and Folder Names (Including Table names)
+      <div class="list-group list-group-root well">
+        <a href="#general-list" class="list-group-item" data-toggle="collapse"> 
+        General Rules (File, Folder, Table and Column Names)
         </a>
-      <div  class="list-group collapse" id="file-list">
-        <a href="#general-rules" class="list-group-item">General Rules</a>
-        <a href="#forbidden-words" class="list-group-item">Forbidden Words</a>
-        <a href="#prefixes-list" class="list-group-item" data-toggle="collapse"> Prefixes</a>
-        <div class="list-group collapse" id="prefixes-list">
-          <a href="#categories" class="list-group-item">Categories</a>
-          <a href="#extent" class="list-group-item">Extent</a>
+        <div  class="list-group collapse" id="general-list">
+          <a href="#mandatory-rules" class="list-group-item">Mandatory Rules</a>
+          <a href="#forbidden-words" class="list-group-item">Forbidden Words</a>
+          <a href="#prefixes-list" class="list-group-item" data-toggle="collapse">Prefixes (Mainly Non-Mandatory)</a>
+          <div class="list-group collapse" id="prefixes-list">
+            <a href="#categories" class="list-group-item">Categories</a>
+            <a href="#extent" class="list-group-item">Extent</a>
+          </div>
+          <a href="#suffixes-list" class="list-group-item" data-toggle="collapse">Suffixes (Non-Mandatory)</a>
+          <div class="list-group collapse" id="suffixes-list">
+            <a href="#versions" class="list-group-item">Versions</a>
+            <a href="#timestamps" class="list-group-item">Specific rules for tables</a>
+          </div>
         </div>
-        <a href="#suffixes-list" class="list-group-item" data-toggle="collapse"> Suffixes</a>
-        <div class="list-group collapse" id="suffixes-list">
-          <a href="#versions" class="list-group-item">Versions</a>
-          <a href="#timestamps" class="list-group-item">Timestamps</a>
+        <a href="#tables-list" class="list-group-item" data-toggle="collapse"> 
+        Specific rules for tables
+        </a>
+        <div  class="list-group collapse" id="tables-list">
+          <a href="#column-names" class="list-group-item">Column Names</a>
         </div>
-        <a href="#ŕeserved-words" class="list-group-item">Reserved Words</a>
+        <a href="#examples-list" class="list-group-item" data-toggle="collapse"> 
+        Examples
+        </a>
+        <div  class="list-group collapse" id="examples-list">
+          <a href="#examples-starting" class="list-group-item">Starting Point</a>
+          <a href="#examples-general" class="list-group-item">Meeting General Rules</a>
+          <a href="#examples-forbidden" class="list-group-item">Use of Forbidden Words</a>
+          <a href="#examples-nonmandatory" class="list-group-item">Not Mandatory Changes</a>
+          <a href="#examples-country" class="list-group-item">Country code</a>
+          <a href="#examples-category" class="list-group-item">Category code</a>
+          <a href="#examples-versioning" class="list-group-item">Versioning</a>
+          <a href="#examples-final" class="list-group-item">Final Resul</a>
+        </div>
       </div>
-      <a href="#column-names" class="list-group-item">Column Names</a>
-    </div>
     </div>
   </div>
+</div>
 {% endblock %}
