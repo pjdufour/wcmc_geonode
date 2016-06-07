@@ -11,19 +11,38 @@ try:
 except ImportError:
     pass
 
+ogr = osgeo.ogr
 datastore = DATABASES['datastore']
-conn_string = "host=" + datastore['HOST'] + " port=" + datastore['PORT'] + " dbname=" + datastore['NAME'] + " user=" + datastore['USER'] + " password=" + datastore['PASSWORD']
-connection = psycopg2.connect(conn_string)  
-cursor = connection.cursor()  
-cursor.execute("DELETE FROM countries")  
-srcFile = ".shp"  
-shapefile = osgeo.ogr.Open(srcFile)    
-layer = shapefile.GetLayer(0)    cursor.execute("DELETE FROM countries")
-for i in range(layer.GetFeatureCount()):  
-    feature = layer.GetFeature(i)  
-    name = feature.GetField("NAME").decode("Latin-1")  
-    wkt = feature.GetGeometryRef().ExportToWkt()  
-    cursor.execute("INSERT INTO countries (name,outline) " +"VALUES (%s, ST_GeometryFromText(%s, " +"4326))", (name.encode("utf8"), wkt))  
+database = datastore['NAME']
+serverName = datastore['HOST']
+port = datastore['PORT']
+usr = datastore['USER']
+pw = datastore['PASSWORD']
+sourceFile = '/home/miguel/Downloads/ne_10m_admin_0_countries.shp'
+conn_str = "PG:dbname='%s' host='%s' port='%s' user='%s' password='%s'" % (database,serverName,port,usr,pw)
 
-connection.commit()  
+def testLoad(serverDS, table, sourceFile):
+    ogr.RegisterAll()
+    shapeDS = ogr.Open(sourceFile)
+    sourceLayer = shapeDS.GetLayerByIndex(0)
+    options = []
+    newLayer = serverDS.CreateLayer(table,sourceLayer.GetSpatialRef(),ogr.wkbUnknown,options)
+    for x in xrange(sourceLayer.GetLayerDefn().GetFieldCount()):
+        newLayer.CreateField(sourceLayer.GetLayerDefn().GetFieldDefn(x))
 
+    newLayer.StartTransaction()
+
+    for x in xrange(sourceLayer.GetFeatureCount()):
+        newFeature = sourceLayer.GetNextFeature()
+        newFeature.SetFID(-1)
+        newLayer.CreateFeature(newFeature)
+        if x % 128 == 0:
+            newLayer.CommitTransaction()
+            newLayer.StartTransaction()
+
+    newLayer.CommitTransaction()
+    return newLayer.GetName()
+
+
+ogrds = ogr.Open(conn_str)
+name = testLoad(ogrds,'countries4',sourceFile)
