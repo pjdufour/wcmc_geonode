@@ -1,4 +1,7 @@
 #!/usr/bin/python
+# Imports shapefiles to geonode accepts 2 arguments: filename and epsg code. If epsg is not provided uses 4326
+
+
 import sys
 import os
 import os.path  
