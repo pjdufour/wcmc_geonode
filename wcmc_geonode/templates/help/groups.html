@@ -1,0 +1,41 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "User Guide" %} - {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>Groups</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+  	In order to make easier to define who has access to a dataset UNEP-WCMC has the groups feature. We have base groups that match the Centre's Programmes but they can also be created on demand for projects or inter-programme groups of users.
+  	<h3 id="create">Creating and Editing a Group</h3>
+  	<p>Groups can be created after cliccking in a button on its page. To edit you will need to browse and click on Edit Programme Details You will need to set a title (it may not start with a number), choose a logo and write a description. It is also possible to set an email to contact the group manager and to set keywords. The most important setting is setting the access type, that can be:</p>
+
+  	<ul>
+  		<li>Public - All users can view and join the group</li>
+  		<li>Public (invite only) - All users can view the group but joining is only by invitation</li>
+  		<li>Private - Only group members can view and joining is only by invitation</li>
+  	</ul>
+
+  	<h3 id="manage">Managing Group Mmebers</h3>
+  	<p>Users can have two different roles within a group:<p>
+  	<ul>
+  		<li>Members: Users that can access group's datasets and documents</li>
+  		<li>Managers: Users that can access group's datasets, maps and documents, manage members edit and delete the group</li>
+  	</ul>
+
+  	<p>The manager can add members from all UNEP-WCMC Data Portal users and set their roles.</p>
+  	<h3 id="view">Viewing activities</h3>
+  	<p>It is possible to browse through all the changes made within a group clicking on the Activity Feed link.</p>
+  </div>
+  <div class="col-md-4">
+    <ul class="list-group">
+      <li class="list-group-item"><a href="#create">Creating and Editing a Group</a></li>
+      <li class="list-group-item"><a href="#manage">Managing Group Mmebers</a></li>
+      <li class="list-group-item"><a href="#view">Viewing activities</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
