@@ -1,3 +1,0 @@
-python-ldap>=2.4.25
-django-auth-ldap>=1.2.7
-django-ldapbackend>=0.0.1.1
