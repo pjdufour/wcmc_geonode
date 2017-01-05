@@ -398,6 +398,7 @@ TEMPLATES = [
                 'account.context_processors.account',
                 'geonode.context_processors.resource_urls',
                 'geonode.geoserver.context_processors.geoserver_urls',
+                'wcmc_geonode.context_processors.wcmc_geonode',
             ],
             'debug': DEBUG,
         },

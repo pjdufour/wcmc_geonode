@@ -1,14 +1,37 @@
 {% extends 'index.html' %}
 {% load i18n %}
+
 {% comment %}
-This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
+This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs.
 {% endcomment %}
-  {% block hero %}
-  <div class="jumbotron">
-    <div class="container">
-      <h1>{% trans "UNEP-WCMC Data Portal" %}</h1>
-      <p>{% blocktrans %}<a href="https://www.unep-wcmc.org">UNEP-WCMC</a> is the specialist biodiversity assessment arm of the United Nations Environment Programme (UNEP) based in Cambridge, UK. This Portal is the focal point for our data.{% endblocktrans %}</p>
-      <span>{% trans 'Need help?' %} <a href="./help">{% trans 'Getting Started' %}</a></span>
-    </div>
+
+{% block hero %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>{% trans "UNEP-WCMC Data Portal" %}</h1>
+    <p>{% blocktrans %}<a href="https://www.unep-wcmc.org">UNEP-WCMC</a> is the specialist biodiversity assessment arm of the United Nations Environment Programme (UNEP) based in Cambridge, UK. This Portal is the focal point for our data.{% endblocktrans %}</p>
+    <span>{% trans 'Need help?' %} <a href="./help">{% trans 'Getting Started' %}</a></span>
   </div>
-  {% endblock %}
+</div>
+{% endblock %}
+
+{% block showcase %}
+<section id="showcase">
+  <div class="container">
+    <div class="row">
+      <h2>Featured Datasets</h2>
+      <div>
+        {% for x in MOCK_FEATURED_DATASETS %}
+        <div>
+          <div class="col-md-3">
+            <a href="{{ x.url }}"><img src="{{ x.thumbnail }}" /></a>
+            <h4>{{ x.title }}</h4>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <p><a href="/search/">Explore all datasets</a></p>
+  </div>
+</section>
+{% endblock %}

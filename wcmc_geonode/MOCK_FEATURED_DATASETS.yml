@@ -1,0 +1,19 @@
+---
+datasets:
+  - title: "WDPA Polygons (Current Version)"
+    description: "The World Database on Protected Areas (WDPA) is the most comprehensive global spatial dataset on marine and terrestrial protected areas available. Protected areas are internationally recognised as major tools in conserving species and ecosystems."
+    thumbnail: "/static/img/background.jpg"
+    url: "#"
+  - title: "WDPA Points (Current Version)"
+    description: "The World Database on Protected Areas (WDPA) is the most comprehensive global spatial dataset on marine and terrestrial protected areas available.
+Protected areas are internationally recognised as major tools in conserving species and ecosystems."
+    thumbnail: "/static/img/background.jpg"
+    url: "#"
+  - title: "Global Distribution of Sea Turtle Nesting Sites"
+    description: "This dataset shows the known locations of sea turtle nesting sites, for all seven species: hawksbill turtle (Eretmochelys imbricata), Kemp's ridley turtle (Lepidochelys kempii), leatherback turtle (Dermochelys coriacea), green turtle (Chelonia mydas), loggerhead turtle (Caretta caretta), olive ridl..."
+    thumbnail: "/static/img/background.jpg"
+    url: "#"
+  - title: "Global Distribution of Seagrasses (Polygon)"
+    description: "This dataset was developed alongside the publication by Green and Short (2003), and was the first authoritative and comprehensive global synthesis of the distribution and status of seagrasses."
+    thumbnail: "/static/img/background.jpg"
+    url: "#"
