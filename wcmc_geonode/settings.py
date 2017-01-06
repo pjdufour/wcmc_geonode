@@ -291,7 +291,7 @@ _DEFAULT_INSTALLED_APPS = (
     'geoexplorer',
     'leaflet',
     'django_extensions',
-    # 'geonode_client',
+    'geonode_client',
     # 'overextends',
     # 'haystack',
     'autocomplete_light',
