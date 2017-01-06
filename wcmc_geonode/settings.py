@@ -935,7 +935,7 @@ CACHES = {
     #     }
 }
 
-LAYER_PREVIEW_LIBRARY = 'geoext'
+LAYER_PREVIEW_LIBRARY = 'react'  #geoext
 
 SERVICE_UPDATE_INTERVAL = 0
 
