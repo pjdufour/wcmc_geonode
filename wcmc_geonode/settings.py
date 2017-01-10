@@ -56,6 +56,19 @@ DEBUG_STATIC = str2bool(os.getenv('DEBUG_STATIC', 'False'))
 # geonode to be listening for GeoServer auth requests.
 os.environ['DJANGO_LIVE_TEST_SERVER_ADDRESS'] = 'localhost:8000'
 
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', 'django'])
+
+# AUTH_IP_WHITELIST property limits access to users/groups REST endpoints
+# to only whitelisted IP addresses.
+#
+# Empty list means 'allow all'
+#
+# If you need to limit 'api' REST calls to only some specific IPs
+# fill the list like below:
+#
+# AUTH_IP_WHITELIST = ['192.168.1.158', '192.168.1.159']
+AUTH_IP_WHITELIST = []
+
 SECRET_KEY = os.getenv('SECRET_KEY', "%+*clu5zngi-$s2gz8%+icf@izp)eq_eqz(8f-k14-6##_xz6#")
 
 DATABASE_URL = os.getenv(
